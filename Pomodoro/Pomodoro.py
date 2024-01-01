@@ -8,8 +8,10 @@ from PyQt6 import QtCore
 import playsound
 import json
 
-# TODO: Victory message needs to play on both Mac/PC. Playsound didn't work on PC -
-# TODO: could be device issue. Still Under review.
+# TODO: Victory message needs to play on both Mac/PC. Playsound didn't work on PC. May be the M4A File.
+#  Should change to MP3?
+
+# TODO: UI Work. With Each Change, its gross on the opposite system (Mac VS PC). Must read up on this.
 
 class TWindow(QWidget):
     def __init__(self):
@@ -269,8 +271,8 @@ class TWindow(QWidget):
             else:
                 self.pom_min_label = int(stime)
 
-        # self.pomtime = QtCore.QTime(00, int(self.timer_amt), 00)
-        self.pomtime = QtCore.QTime(00, 00, 10)
+        self.pomtime = QtCore.QTime(00, int(self.timer_amt), 00)
+        # self.pomtime = QtCore.QTime(00, 00, 10)
 
         self.timer.timeout.connect(lambda: self.time())
         self.timer.start(1000)

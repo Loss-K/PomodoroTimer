@@ -90,7 +90,7 @@ class TWindow(QWidget):
 
         # C/D Button
         self.playbutton = "AddOn_Functionality/Pomodoro/Play.png"
-        self.pausebutton = "AddOn_Functionality/Pomodoro/Pause.ico"
+        self.pausebutton = "AddOn_Functionality/Pomodoro/Pause.png"
 
         self.connect_button = QPushButton("Start Timer", self)
         self.connect_button.setGeometry(130, 100, 100, 40)
